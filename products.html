@@ -5,8 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products | RR Furniture</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Extra Styling + Animations -->
+  <style>
+    /* Fade-up animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.9s ease forwards;
+    }
+    .fade-up:nth-child(1) { animation-delay: 0.2s; }
+    .fade-up:nth-child(2) { animation-delay: 0.4s; }
+    .fade-up:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Product gallery styling */
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: 280px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 18px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #555;
+    }
+
+  </style>
 </head>
 <body>
+
   <header>
     <img src="images/logo.png" alt="RR Furniture Logo" class="logo">
     <nav>
@@ -22,18 +85,20 @@
   </section>
 
   <section class="gallery">
-    <div class="card">
-      <img src="images/sofa.jpg" alt="Sofa">
+    <div class="card fade-up">
+      <img src="images/sofa.png" alt="Sofa">
       <h3>Luxury Sofa Set</h3>
       <p>Soft cushions, solid frame, premium fabric.</p>
     </div>
-    <div class="card">
-      <img src="images/chair.jpg" alt="Chair">
+
+    <div class="card fade-up">
+      <img src="images/chair.png" alt="Chair">
       <h3>Office Chair</h3>
       <p>Ergonomic and durable, designed for comfort.</p>
     </div>
-    <div class="card">
-      <img src="images/table.jpg" alt="Table">
+
+    <div class="card fade-up">
+      <img src="images/table.png" alt="Table">
       <h3>Dining Table</h3>
       <p>Modern design crafted from high-quality wood.</p>
     </div>
@@ -42,5 +107,6 @@
   <footer>
     <p>© 2025 RR Furniture. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

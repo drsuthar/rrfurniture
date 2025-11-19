@@ -5,8 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | RR Furniture</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Extra Styling + Animation -->
+  <style>
+
+    /* Smooth fade-up animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .fade-up:nth-child(1) { animation-delay: 0.2s; }
+    .fade-up:nth-child(2) { animation-delay: 0.4s; }
+    .fade-up:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Better content styling */
+    .content {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.7;
+      font-size: 18px;
+      color: #333;
+      text-align: center;
+    }
+
+    .content p {
+      margin-bottom: 20px;
+    }
+
+  </style>
+
 </head>
 <body>
+
   <header>
     <img src="images/logo.png" alt="RR Furniture Logo" class="logo">
     <nav>
@@ -22,13 +62,14 @@
   </section>
 
   <section class="content">
-    <p>At RR Furniture, we believe in transforming spaces with handcrafted furniture that blends comfort, functionality, and elegance.</p>
-    <p>Based in India, we offer a wide range of products — from cozy sofas to smart storage solutions — designed to elevate your lifestyle.</p>
-    <p>Our mission is simple: deliver premium quality furniture that lasts for years, while providing an exceptional customer experience.</p>
+    <p class="fade-up">At <strong>RR Furniture</strong>, we believe in transforming spaces with handcrafted furniture that blends comfort, functionality, and elegance.</p>
+    <p class="fade-up">Based in India, we offer a wide range of products — from cozy sofas to smart storage solutions — designed to elevate your lifestyle.</p>
+    <p class="fade-up">Our mission is simple: deliver premium quality furniture that lasts for years, while providing an exceptional customer experience.</p>
   </section>
 
   <footer>
     <p>© 2025 RR Furniture. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

@@ -1,75 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | RR Furniture</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Extra Styling + Animation -->
-  <style>
-
-    /* Smooth fade-up animation */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 1s ease forwards;
-    }
-
-    .fade-up:nth-child(1) { animation-delay: 0.2s; }
-    .fade-up:nth-child(2) { animation-delay: 0.4s; }
-    .fade-up:nth-child(3) { animation-delay: 0.6s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Better content styling */
-    .content {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.7;
-      font-size: 18px;
-      color: #333;
-      text-align: center;
-    }
-
-    .content p {
-      margin-bottom: 20px;
-    }
-
-  </style>
-
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <img src="images/logo.png" alt="RR Furniture Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-wrap" href="index.html">
+        <img src="images/logo.png" alt="RR Furniture logo" class="logo" />
+        <span>RR Furniture</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="controls">
+        <button class="icon-btn mobile-menu-btn" id="menu-toggle" aria-label="Open menu">☰</button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
   </header>
 
-  <section class="page-header">
-    <h1>About Us</h1>
-  </section>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">About our studio</p>
+        <h1>We create furniture experiences that feel luxurious yet livable.</h1>
+        <p>RR Furniture started with a simple mission: deliver premium furniture and design guidance that makes homes feel composed, welcoming, and uniquely personal.</p>
+      </div>
+    </section>
 
-  <section class="content">
-    <p class="fade-up">At <strong>RR Furniture</strong>, we believe in transforming spaces with handcrafted furniture that blends comfort, functionality, and elegance.</p>
-    <p class="fade-up">Based in India, we offer a wide range of products — from cozy sofas to smart storage solutions — designed to elevate your lifestyle.</p>
-    <p class="fade-up">Our mission is simple: deliver premium quality furniture that lasts for years, while providing an exceptional customer experience.</p>
-  </section>
+    <section class="section">
+      <div class="container split">
+        <article class="panel">
+          <h2>Our Journey</h2>
+          <p>Over the years we have evolved from a local supplier into a trusted design partner for residential and office projects across multiple cities.</p>
+          <ul>
+            <li>Curated furniture collections with modern aesthetics.</li>
+            <li>Reliable sourcing and quality checks before dispatch.</li>
+            <li>Hands-on support for sizing and placement decisions.</li>
+          </ul>
+        </article>
+        <article class="hero-media">
+          <img src="images/about-workshop.svg" alt="RR Furniture workshop craftsmanship" />
+        </article>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>© 2025 RR Furniture. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> RR Furniture. All rights reserved.</p>
+      <p>Design-led furniture for evolving spaces.</p>
+    </div>
   </footer>
 
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>

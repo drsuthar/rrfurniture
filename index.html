@@ -3,145 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RR Furniture | Home</title>
-  <link rel="icon" href="images/favicon.png" type="image/png">
-
+  <title>RR Furniture | Elegant Interiors</title>
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Extra Styling + Animation -->
-  <style>
-    /* Fade-up animation */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 1s ease forwards;
-    }
-    .fade-up:nth-child(1) { animation-delay: 0.2s; }
-    .fade-up:nth-child(2) { animation-delay: 0.4s; }
-    .fade-up:nth-child(3) { animation-delay: 0.6s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Hero section improvements */
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(to bottom right, #f9f9f9, #ffffff);
-      animation: fadeUp 1.2s ease forwards;
-    }
-
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    .btn {
-      background: #333;
-      padding: 12px 25px;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 18px;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #555;
-    }
-
-    /* Highlights section */
-    .highlights {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 50px 20px;
-      text-align: center;
-      flex-wrap: wrap;
-    }
-
-    .highlights div {
-      width: 280px;
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-
-    .highlights div:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
-    }
-
-    .highlights img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .highlights h3 {
-      margin-bottom: 10px;
-    }
-
-  </style>
 </head>
 <body>
-
-<header>
-  <img src="images/logo.png" alt="RR Furniture Logo" class="logo">
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-  <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
-</header>
-
-
-  <!-- Hero Section -->
-  <section class="hero fade-up">
-    <h1>Welcome to RR Furniture</h1>
-    <p>Crafting comfort and style for your home and office.</p>
-    <a href="products.html" class="btn">Explore Products</a>
-  </section>
-
-  <!-- Highlights -->
-  <section class="highlights">
-    <div class="fade-up">
-      <img src="images/sofa.png" alt="Sofa">
-      <h3>Elegant Sofas</h3>
-      <p>Comfortable and stylish designs to suit every living space.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-wrap" href="index.html">
+        <img src="images/logo.png" alt="RR Furniture logo" class="logo" />
+        <span>RR Furniture</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="controls">
+        <button class="icon-btn mobile-menu-btn" id="menu-toggle" aria-label="Open menu">☰</button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
     </div>
+  </header>
 
-    <div class="fade-up">
-      <img src="images/table.png" alt="Table">
-      <h3>Modern Tables</h3>
-      <p>Durable, practical, and beautiful centerpieces for your rooms.</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Bespoke interiors for modern living</p>
+          <h1>Timeless furniture that brings warmth, balance, and character.</h1>
+          <p>RR Furniture helps you create intentional spaces with premium sofas, handcrafted tables, and practical storage solutions curated for contemporary Indian homes.</p>
+          <div class="cta-row">
+            <a href="products.html" class="btn btn-primary">View Collection</a>
+            <a href="contact.html" class="btn btn-secondary">Book Consultation</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="images/sofa.png" alt="Curated living room sofa setup" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Design Philosophy</h2>
+        <p class="section-intro">A refined blend of aesthetics and utility inspired by premium interior studios.</p>
+        <div class="card-grid">
+          <article class="card">
+            <img src="images/table.png" alt="Dining table setup" />
+            <div class="card-content">
+              <h3>Elevated craft</h3>
+              <p>Every piece is created with durable finishes, clean detailing, and a premium visual rhythm.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/chair.png" alt="Accent chair" />
+            <div class="card-content">
+              <h3>Functional beauty</h3>
+              <p>Layouts and forms are selected to make daily living easy while maintaining elegance.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/logo2.png" alt="Furniture design moodboard" />
+            <div class="card-content">
+              <h3>Personalized styling</h3>
+              <p>Our team recommends combinations that align with your space, taste, and lifestyle.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container promo">
+        <div>
+          <h2>Need full-room planning support?</h2>
+          <p>From one statement piece to complete home setups, we guide measurements, materials, and styling direction.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> RR Furniture. All rights reserved.</p>
+      <p>Crafted spaces. Comfortable living.</p>
     </div>
-
-    <div class="fade-up">
-      <img src="images/chair.png" alt="Chair">
-      <h3>Designer Chairs</h3>
-      <p>Ergonomic comfort with a touch of elegance.</p>
-    </div>
-  </section>
-
-
-  <footer>
-    <p>© 2025 RR Furniture. All rights reserved.</p>
   </footer>
- <script src="script.js"></script>
+
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>

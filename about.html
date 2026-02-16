@@ -1,75 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | RR Furniture</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Extra Styling + Animation -->
-  <style>
-
-    /* Smooth fade-up animation */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 1s ease forwards;
-    }
-
-    .fade-up:nth-child(1) { animation-delay: 0.2s; }
-    .fade-up:nth-child(2) { animation-delay: 0.4s; }
-    .fade-up:nth-child(3) { animation-delay: 0.6s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Better content styling */
-    .content {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.7;
-      font-size: 18px;
-      color: #333;
-      text-align: center;
-    }
-
-    .content p {
-      margin-bottom: 20px;
-    }
-
-  </style>
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <img src="images/logo.png" alt="RR Furniture Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-wrap" href="index.html">
+        <img src="images/logo.png" alt="RR Furniture logo" class="logo" />
+        <span>RR Furniture</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="controls">
+        <button class="icon-btn mobile-menu-btn" id="menu-toggle" aria-label="Open menu">☰</button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
   </header>
 
-  <section class="page-header">
-    <h1>About Us</h1>
-  </section>
+  <main class="section">
+    <div class="container">
+      <h1>About RR Furniture</h1>
+      <p class="section-intro">We craft furniture that balances comfort, utility, and a clean modern aesthetic.</p>
 
-  <section class="content">
-    <p class="fade-up">At <strong>RR Furniture</strong>, we believe in transforming spaces with handcrafted furniture that blends comfort, functionality, and elegance.</p>
-    <p class="fade-up">Based in India, we offer a wide range of products — from cozy sofas to smart storage solutions — designed to elevate your lifestyle.</p>
-    <p class="fade-up">Our mission is simple: deliver premium quality furniture that lasts for years, while providing an exceptional customer experience.</p>
-  </section>
+      <div class="about-layout">
+        <article class="info-box fade-up">
+          <h2>Our Story</h2>
+          <p>
+            RR Furniture started with a simple idea: everyday spaces deserve quality furniture that feels as good
+            as it looks. We combine practical design with premium materials to build pieces you'll use for years.
+          </p>
+        </article>
+        <article class="info-box fade-up">
+          <img src="images/about-workshop.svg" alt="Furniture workshop illustration" />
+        </article>
+      </div>
 
-  <footer>
-    <p>© 2025 RR Furniture. All rights reserved.</p>
+      <div class="about-layout" style="margin-top: 1rem;">
+        <article class="info-box fade-up">
+          <h2>Why customers choose us</h2>
+          <ul class="list">
+            <li>Curated contemporary collections for home and office.</li>
+            <li>Durable wood, fabrics, and hardware sourced responsibly.</li>
+            <li>Simple ordering process with clear communication.</li>
+            <li>Reliable support before and after delivery.</li>
+          </ul>
+        </article>
+        <article class="info-box fade-up">
+          <h2>Our Mission</h2>
+          <p>
+            To make modern furniture accessible without compromise—bringing thoughtful design, reliable quality,
+            and exceptional service to every customer across India.
+          </p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> RR Furniture. All rights reserved.</p>
+      <p>Designed for life, built for everyday comfort.</p>
+    </div>
   </footer>
 
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>

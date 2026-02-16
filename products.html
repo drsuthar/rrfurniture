@@ -1,112 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products | RR Furniture</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Extra Styling + Animations -->
-  <style>
-    /* Fade-up animation */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.9s ease forwards;
-    }
-    .fade-up:nth-child(1) { animation-delay: 0.2s; }
-    .fade-up:nth-child(2) { animation-delay: 0.4s; }
-    .fade-up:nth-child(3) { animation-delay: 0.6s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Product gallery styling */
-    .gallery {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      padding: 40px 20px;
-    }
-
-    .card {
-      width: 280px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 18px rgba(0,0,0,0.15);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
-      color: #333;
-    }
-
-    .card p {
-      font-size: 16px;
-      color: #555;
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <img src="images/logo.png" alt="RR Furniture Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-wrap" href="index.html">
+        <img src="images/logo.png" alt="RR Furniture logo" class="logo" />
+        <span>RR Furniture</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="controls">
+        <button class="icon-btn mobile-menu-btn" id="menu-toggle" aria-label="Open menu">☰</button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </div>
   </header>
 
-  <section class="page-header">
-    <h1>Our Products</h1>
-  </section>
+  <main class="section">
+    <div class="container">
+      <h1>Featured Collection</h1>
+      <p class="section-intro">Explore our most loved furniture pieces designed for modern homes and offices.</p>
 
-  <section class="gallery">
-    <div class="card fade-up">
-      <img src="images/sofa.png" alt="Sofa">
-      <h3>Luxury Sofa Set</h3>
-      <p>Soft cushions, solid frame, premium fabric.</p>
+      <div class="product-grid">
+        <article class="card fade-up">
+          <img src="images/product-sofa.svg" alt="Nova Lounge Sofa" />
+          <div class="card-content">
+            <h3>Nova Lounge Sofa</h3>
+            <p>Deep-seat comfort with stain-resistant fabric and soft rounded lines.</p>
+            <p class="price">₹48,900</p>
+          </div>
+        </article>
+
+        <article class="card fade-up">
+          <img src="images/product-chair.svg" alt="Aero Office Chair" />
+          <div class="card-content">
+            <h3>Aero Office Chair</h3>
+            <p>Ergonomic support, breathable mesh back, and adjustable lumbar fit.</p>
+            <p class="price">₹12,400</p>
+          </div>
+        </article>
+
+        <article class="card fade-up">
+          <img src="images/product-table.svg" alt="Elm Dining Table" />
+          <div class="card-content">
+            <h3>Elm Dining Table</h3>
+            <p>Solid wood top with minimalist frame for 6-seater family dining.</p>
+            <p class="price">₹31,600</p>
+          </div>
+        </article>
+      </div>
     </div>
+  </main>
 
-    <div class="card fade-up">
-      <img src="images/chair.png" alt="Chair">
-      <h3>Office Chair</h3>
-      <p>Ergonomic and durable, designed for comfort.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> RR Furniture. All rights reserved.</p>
+      <p>Upgrade your interiors with timeless pieces.</p>
     </div>
-
-    <div class="card fade-up">
-      <img src="images/table.png" alt="Table">
-      <h3>Dining Table</h3>
-      <p>Modern design crafted from high-quality wood.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 RR Furniture. All rights reserved.</p>
   </footer>
 
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>

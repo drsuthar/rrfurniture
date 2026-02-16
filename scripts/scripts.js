@@ -3,18 +3,16 @@ const themeToggle = document.getElementById('theme-toggle');
 const menuToggle = document.getElementById('menu-toggle');
 const nav = document.getElementById('site-nav');
 
-function applyTheme(theme) {
-  const isDark = theme === 'dark';
-  body.classList.toggle('dark-mode', isDark);
-
+const applyTheme = (theme) => {
+  const dark = theme === 'dark';
+  body.classList.toggle('dark-mode', dark);
   if (themeToggle) {
-    themeToggle.textContent = isDark ? '☀️' : '🌙';
-    themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    themeToggle.textContent = dark ? '☀️' : '🌙';
+    themeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
   }
-}
+};
 
-const savedTheme = localStorage.getItem('theme') || 'light';
-applyTheme(savedTheme);
+applyTheme(localStorage.getItem('theme') || 'light');
 
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
@@ -34,7 +32,15 @@ if (menuToggle && nav) {
   });
 }
 
-const yearNode = document.getElementById('year');
-if (yearNode) {
-  yearNode.textContent = String(new Date().getFullYear());
-}
+document.getElementById('year')?.replaceChildren(document.createTextNode(new Date().getFullYear()));
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-up').forEach((item) => observer.observe(item));

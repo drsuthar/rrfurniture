@@ -1,73 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | RR Furniture</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    .whatsapp-btn {
-      background-color: #25D366;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 18px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
-    }
-  </style>
-
-  <style>
-  .email-btn {
-    background-color: #0073e6;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 18px;
-    display: inline-block;
-    margin-top: 10px;
-  }
-</style>
-
-
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="RR Furniture Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <div class="top-strip">Book a design consultation with our furniture specialists</div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-wrap" href="index.html">
+        <img src="images/logo.png" alt="RR Furniture logo" class="logo" />
+        <span>RR Furniture</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Collections</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
   </header>
 
-  <section class="page-header">
-    <h1>Contact Us</h1>
-  </section>
+  <main class="section">
+    <div class="container">
+      <div class="section-title fade-up">
+        <h1>Let's design your ideal space</h1>
+        <p>Share your layout, style goals, and budget—we'll recommend furniture that fits beautifully.</p>
+      </div>
 
-  <section class="contact">
-    <p class="fade-up">📍 Address: RR Furniture, Delhi, India</p>
-    <p class="fade-up">📞 Phone: +91-9725432148</p>
-    <a class="email-btn" 
-   href="mailto:deepaksuthar000@gmail.com?subject=Inquiry%20from%20RR%20Furniture%20Website">
-  ✉️ Send Email
-    </a>
+      <div class="contact-grid">
+        <article class="contact-card fade-up">
+          <h2>Visit our studio</h2>
+          <p><strong>Address:</strong> RR Furniture, Delhi, India</p>
+          <p><strong>Phone:</strong> +91-9725432148</p>
+          <p><strong>Hours:</strong> Mon - Sat, 10:00 AM - 8:00 PM</p>
+          <p><strong>Email:</strong> deepaksuthar000@gmail.com</p>
+        </article>
 
+        <article class="contact-card fade-up">
+          <h2>Quick connect</h2>
+          <p>
+            Send your room details and preferred style. We usually reply the same day with curated options.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:deepaksuthar000@gmail.com?subject=RR%20Furniture%20Consultation">Email Us</a>
+            <a class="btn btn-secondary" href="https://wa.me/919610053048" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
 
-    <!-- WhatsApp Button -->
-    <a class="whatsapp-btn" href="https://wa.me/919610053048" target="_blank">
-      💬 Chat on WhatsApp
-    </a>
-  </section>
-
-  <footer>
-    <p>© 2025 RR Furniture. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> RR Furniture. All rights reserved.</p>
+      <p>Elegant furniture, personalized service, lasting comfort.</p>
+    </div>
   </footer>
+
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>

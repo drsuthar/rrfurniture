@@ -1,75 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | RR Furniture</title>
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Extra Styling + Animation -->
-  <style>
-
-    /* Smooth fade-up animation */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 1s ease forwards;
-    }
-
-    .fade-up:nth-child(1) { animation-delay: 0.2s; }
-    .fade-up:nth-child(2) { animation-delay: 0.4s; }
-    .fade-up:nth-child(3) { animation-delay: 0.6s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Better content styling */
-    .content {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      line-height: 1.7;
-      font-size: 18px;
-      color: #333;
-      text-align: center;
-    }
-
-    .content p {
-      margin-bottom: 20px;
-    }
-
-  </style>
-
+  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="top-strip">30+ years of design heritage and craftsmanship excellence</div>
 
-  <header>
-    <img src="images/logo.png" alt="RR Furniture Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo-wrap" href="index.html">
+        <img src="images/logo.png" alt="RR Furniture logo" class="logo" />
+        <span>RR Furniture</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="products.html">Collections</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
   </header>
 
-  <section class="page-header">
-    <h1>About Us</h1>
-  </section>
+  <main>
+    <section class="section">
+      <div class="container about-grid">
+        <article class="panel fade-up">
+          <span class="eyebrow">Our story</span>
+          <h1>We design furniture that balances comfort and visual harmony.</h1>
+          <p>
+            RR Furniture began with a simple mission: offer beautiful, dependable furniture with
+            the same care as a design studio. Today we serve homeowners, architects, and businesses
+            looking for quality pieces that age gracefully.
+          </p>
+          <p>
+            From concept sketches to final polishing, we manage every step with precise quality checks.
+            This hands-on process lets us deliver timeless pieces tailored to each space.
+          </p>
+        </article>
+        <div class="panel fade-up">
+          <img src="images/about-workshop.svg" alt="RR Furniture workshop and design process" />
+        </div>
+      </div>
+    </section>
 
-  <section class="content">
-    <p class="fade-up">At <strong>RR Furniture</strong>, we believe in transforming spaces with handcrafted furniture that blends comfort, functionality, and elegance.</p>
-    <p class="fade-up">Based in India, we offer a wide range of products — from cozy sofas to smart storage solutions — designed to elevate your lifestyle.</p>
-    <p class="fade-up">Our mission is simple: deliver premium quality furniture that lasts for years, while providing an exceptional customer experience.</p>
-  </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-title fade-up">
+          <h2>Why clients trust RR Furniture</h2>
+          <p>Professional service and premium outcomes from first consultation to final delivery.</p>
+        </div>
+        <div class="stats-grid">
+          <article class="stat fade-up">
+            <h3>1200+</h3>
+            <p>Homes furnished</p>
+          </article>
+          <article class="stat fade-up">
+            <h3>300+</h3>
+            <p>Custom projects delivered</p>
+          </article>
+          <article class="stat fade-up">
+            <h3>4.8/5</h3>
+            <p>Average client rating</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>© 2025 RR Furniture. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> RR Furniture. All rights reserved.</p>
+      <p>Crafting elegant furniture with purpose and precision.</p>
+    </div>
   </footer>
 
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>

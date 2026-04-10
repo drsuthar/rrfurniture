@@ -24,11 +24,17 @@ if (themeToggle) {
 
 if (menuToggle && nav) {
   menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    const isOpen = nav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
   });
 
   nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => nav.classList.remove('open'));
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open menu');
+    });
   });
 }
 

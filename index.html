@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="RR Furniture designs interior-ready living spaces with curated collections, styling support, and room-by-room planning." />
+  <meta property="og:title" content="RR Furniture | Interior-First Living" />
+  <meta property="og:description" content="Curated furniture and design guidance for elegant, modern homes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/hero-modern-living.svg" />
   <title>RR Furniture | Interior-First Living</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo-wrap" href="index.html">
@@ -23,13 +29,13 @@
         <a href="catalogue.html">Pricing</a>
       </nav>
       <div class="controls">
-        <button class="icon-btn mobile-menu-btn" id="menu-toggle" aria-label="Open menu">☰</button>
+        <button class="icon-btn mobile-menu-btn" id="menu-toggle" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">☰</button>
         <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">🌙</button>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero">
       <div class="container hero-grid">
         <div class="fade-up">
@@ -120,6 +126,36 @@
           <article class="design-point fade-up">
             <h3>Smart office corners</h3>
             <p>Ergonomic planning with compact storage and intentional background styling.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Why clients choose RR Furniture</h2>
+        <p class="section-intro">A few practical upgrades that make the buying journey feel premium from first click to final delivery.</p>
+        <div class="card-grid">
+          <article class="card fade-up testimonial-card">
+            <div class="card-content">
+              <h3>Clear package pricing</h3>
+              <p>Show room bundles (starter, premium, luxury) with inclusions and lead times to reduce decision friction.</p>
+              <span class="tag">Great for faster conversions</span>
+            </div>
+          </article>
+          <article class="card fade-up testimonial-card">
+            <div class="card-content">
+              <h3>Proof-rich project stories</h3>
+              <p>Add before/after case studies with room sizes, budget ranges, and timeline snapshots so buyers trust outcomes.</p>
+              <span class="tag">Builds social proof</span>
+            </div>
+          </article>
+          <article class="card fade-up testimonial-card">
+            <div class="card-content">
+              <h3>Interactive planning flow</h3>
+              <p>Add a short “Find my style” quiz to capture preferences and route visitors to fitting collections immediately.</p>
+              <span class="tag">Improves lead quality</span>
+            </div>
           </article>
         </div>
       </div>

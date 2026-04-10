@@ -29,6 +29,23 @@ body {
 
 img { max-width: 100%; display: block; }
 a { color: inherit; }
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--brand);
+  color: #fff;
+  padding: 0.65rem 0.95rem;
+  border-radius: 0 0 10px 0;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus { left: 0; }
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand) 60%, white);
+  outline-offset: 2px;
+}
 
 .container {
   width: min(var(--max-width), calc(100% - 2.5rem));
@@ -211,6 +228,7 @@ a { color: inherit; }
   gap: 1rem;
 }
 .card { overflow: hidden; }
+.testimonial-card { min-height: 100%; }
 .card-content { padding: 1rem; }
 .card h3 { margin: 0 0 0.35rem; font-size: 1.2rem; }
 .card p { margin: 0; color: var(--text-soft); }

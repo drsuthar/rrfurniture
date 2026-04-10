@@ -112,6 +112,57 @@
     body{padding:0;background:#fff}
     .sheet{width:100%;min-height:auto}
   }
+  @media (max-width:720px){
+    .top{padding:8mm 5.5mm 6.5mm}
+    .brand{flex-direction:column;align-items:flex-start;gap:5mm}
+    .title-block{text-align:left;max-width:none}
+    .name{font-size:17.5pt}
+    .title{font-size:18pt}
+    .tag,.sub{font-size:8.5pt}
+
+    .contact{
+      margin-top:4.2mm;
+      grid-template-columns:1fr 1fr;
+    }
+    .cell{
+      min-height:auto;
+      padding:3.3mm 3mm;
+      border-right:1px solid rgba(192,155,58,.18);
+      border-bottom:1px solid rgba(192,155,58,.18);
+    }
+    .cell:nth-child(2n){border-right:none}
+    .cell:nth-last-child(-n+2){border-bottom:none}
+
+    .content{padding:6mm 5.5mm 5mm;gap:5mm}
+    .section{grid-template-columns:1fr;gap:2.6mm}
+    .label{padding-top:0}
+    .items{grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:2.4mm}
+    .card{min-height:18mm}
+    .item{font-size:8.5pt}
+    .rate{font-size:13.8pt}
+
+    .bottom{
+      padding:0 5.5mm 6.2mm;
+      grid-template-columns:1fr;
+      gap:3.2mm;
+    }
+    .notes,.extras{padding:4mm}
+
+    .footer{padding:3.8mm 5.5mm 4.5mm}
+    .footer-row{flex-direction:column;align-items:flex-start;gap:2.6mm}
+    .foot-left{word-break:break-word}
+    .foot-right{text-align:left;max-width:none}
+  }
+  @media (max-width:480px){
+    body{padding:0}
+    .items,.contact{grid-template-columns:1fr}
+    .cell,.cell:nth-child(2n){border-right:none}
+    .cell:not(:last-child){border-bottom:1px solid rgba(192,155,58,.18)}
+    .cell:last-child{border-bottom:none}
+    .nowrap{white-space:normal}
+    .name{font-size:16.2pt}
+    .title{font-size:16.8pt}
+  }
 </style>
 </head>
 <body>

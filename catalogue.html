@@ -4,318 +4,245 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RR Interiors & Furniture — Rate Sheet 2026–27</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --gold:#C09B3A;
-  --gold-lt:#F7EDD0;
-  --gold-dk:#8C6E1F;
-  --dark:#141210;
-  --charcoal:#2A2520;
-  --muted:#7A6F67;
-  --bg:#FAFAF7;
-  --cream:#F5EFE4;
-  --white:#FFFFFF;
-  --border:#E8E0D0;
-}
-body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--dark);min-height:100vh}
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --gold:#C09B3A;
+    --gold-soft:#F3E7C6;
+    --gold-deep:#8C6E1F;
+    --ink:#171411;
+    --text:#2E2924;
+    --muted:#6E655D;
+    --line:#E6DCC7;
+    --paper:#FCFBF8;
+    --paper-2:#F4EFE6;
+    --white:#FFFFFF;
+  }
+  html,body{background:#ece8df;color:var(--text);font-family:'Jost',sans-serif}
+  body{padding:14px}
+  .sheet{
+    width:210mm;
+    min-height:297mm;
+    margin:0 auto;
+    background:var(--paper);
+    border:1px solid #ddd2bc;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+  }
+  .top{
+    background:linear-gradient(135deg,#171411 0%, #221d18 64%, #2c241d 100%);
+    color:#fff;
+    padding:10mm 11mm 8mm;
+    position:relative;
+  }
+  .top::before,.top::after{content:'';position:absolute;border-radius:50%;pointer-events:none}
+  .top::before{width:110mm;height:110mm;right:-35mm;top:-55mm;background:radial-gradient(circle,rgba(192,155,58,.16) 0%,transparent 68%)}
+  .top::after{width:65mm;height:65mm;left:-20mm;bottom:-32mm;background:radial-gradient(circle,rgba(192,155,58,.10) 0%,transparent 72%)}
+  .brand{display:flex;align-items:center;justify-content:space-between;gap:10mm;position:relative;z-index:1}
+  .brand-left{display:flex;align-items:center;gap:5mm;min-width:0}
+  .logo{width:20mm;height:20mm;border-radius:50%;border:1px solid rgba(192,155,58,.42);background:#201b16;display:flex;align-items:center;justify-content:center;overflow:hidden;flex:0 0 auto}
+  .logo img{width:100%;height:100%;object-fit:contain}
+  .identity{min-width:0}
+  .name{font-family:'Cormorant Garamond',serif;font-size:22pt;font-weight:700;line-height:1.02;letter-spacing:.2px}
+  .name em{color:var(--gold);font-style:normal}
+  .tag{margin-top:1.6mm;font-size:9.5pt;color:rgba(255,255,255,.72);letter-spacing:.3px}
+  .title-block{text-align:right;max-width:72mm}
+  .kicker{font-size:8.6pt;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.52);margin-bottom:2mm}
+  .title{font-family:'Cormorant Garamond',serif;font-size:23pt;font-weight:600;line-height:1.02}
+  .title em{font-style:normal;color:var(--gold)}
+  .sub{margin-top:2.4mm;font-size:9.2pt;line-height:1.45;color:rgba(255,255,255,.78)}
 
-/* ── HEADER ── */
-.header{background:var(--dark);position:relative;overflow:hidden}
-.halo{position:absolute;border-radius:50%;pointer-events:none}
-.halo-1{width:500px;height:500px;top:-200px;right:-120px;background:radial-gradient(circle,rgba(192,155,58,.14) 0%,transparent 65%)}
-.halo-2{width:300px;height:300px;bottom:-150px;left:-60px;background:radial-gradient(circle,rgba(192,155,58,.08) 0%,transparent 70%)}
-.header-inner{max-width:900px;margin:0 auto;padding:48px 44px 44px;position:relative;z-index:1}
+  .contact{
+    margin-top:6mm;
+    display:grid;
+    grid-template-columns:1.1fr .95fr .95fr .9fr 1.05fr 1.05fr;
+    border:1px solid rgba(192,155,58,.26);
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    z-index:1;
+  }
+  .cell{padding:3mm 3.2mm;background:rgba(255,255,255,.02);border-right:1px solid rgba(192,155,58,.18);min-height:14mm}
+  .cell:last-child{border-right:none}
+  .lbl{display:block;font-size:7.1pt;letter-spacing:1.4px;text-transform:uppercase;color:rgba(255,255,255,.50);margin-bottom:1.4mm;font-weight:600}
+  .val{font-size:8.6pt;font-weight:500;line-height:1.35;color:#fff;word-break:break-word}
+  .val a{color:#F6D98B;text-decoration:none}
+  .nowrap{white-space:nowrap}
 
-.brand-row{display:flex;align-items:center;gap:22px;margin-bottom:22px}
-.logo-wrap{flex-shrink:0;width:86px;height:86px;border-radius:50%;border:2px solid rgba(192,155,58,.45);overflow:hidden;background:#1e1a16;display:flex;align-items:center;justify-content:center}
-.logo-wrap img{width:100%;height:100%;object-fit:contain}
-.brand-info{display:flex;flex-direction:column;gap:4px}
-.brand-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:#fff;line-height:1.1;letter-spacing:.2px}
-.brand-name em{color:var(--gold);font-style:normal}
-.brand-tagline{font-size:12px;font-style:italic;color:rgba(255,255,255,.38);letter-spacing:.5px;font-family:'Cormorant Garamond',serif}
+  .content{padding:7mm 9mm 6mm;display:grid;grid-template-columns:1fr;gap:4.2mm;flex:1}
+  .section{display:grid;grid-template-columns:28mm 1fr;gap:4mm;align-items:start}
+  .label{padding-top:1.3mm;font-size:7.4pt;letter-spacing:1.7px;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .items{display:grid;grid-template-columns:repeat(4,1fr);gap:2.6mm}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:9px;padding:2.8mm 3mm;min-height:20.5mm;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 2px 10px rgba(26,22,17,.03)}
+  .num{font-size:7.1pt;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold-deep);margin-bottom:1.1mm}
+  .item{font-size:8.8pt;font-weight:500;line-height:1.26;color:var(--ink)}
+  .unit{font-size:7.4pt;color:var(--muted);margin-top:1.4mm}
+  .rate{margin-top:1.8mm;font-family:'Cormorant Garamond',serif;font-size:15.5pt;font-weight:700;color:var(--ink);line-height:1}
 
-.divider-gold{height:1px;background:linear-gradient(90deg,var(--gold) 0%,rgba(192,155,58,.25) 55%,transparent 100%);margin-bottom:22px}
+  .bottom{padding:0 9mm 8mm;display:grid;grid-template-columns:1.16fr .84fr;gap:4mm}
+  .notes,.extras{background:var(--paper-2);border:1px solid var(--line);border-radius:10px;padding:4mm 4.4mm}
+  .box-title{font-family:'Cormorant Garamond',serif;font-size:13.6pt;font-weight:700;color:var(--ink);margin-bottom:2.5mm;display:flex;align-items:center;gap:2mm}
+  .box-title::before{content:'';display:block;width:2.4px;height:13px;background:var(--gold);border-radius:99px}
+  .notes ul{list-style:none;display:grid;gap:1.8mm}
+  .notes li{font-size:8.2pt;line-height:1.45;color:var(--text);padding-left:4mm;position:relative}
+  .notes li::before{content:'•';position:absolute;left:0;top:0;color:var(--gold-deep);font-weight:700}
+  table{width:100%;border-collapse:collapse}
+  th{font-size:7.1pt;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted);text-align:left;padding-bottom:1.8mm;border-bottom:1px solid #dbcfb4}
+  td{font-size:8.2pt;color:var(--text);padding:1.8mm 0;border-bottom:1px solid #e6dcc7}
+  td:last-child,th:last-child{text-align:right}
+  tr:last-child td{border-bottom:none}
+  td:last-child{font-family:'Cormorant Garamond',serif;font-size:10pt;font-weight:700;color:var(--ink)}
 
-.headline{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;color:#fff;line-height:1.05;margin-bottom:10px}
-.headline em{color:var(--gold);font-style:normal}
-.sub{font-size:14px;color:rgba(255,255,255,.45);font-weight:300;line-height:1.65;max-width:480px;margin-bottom:24px}
+  .footer{background:#181410;color:#fff;padding:4mm 9mm 5mm;margin-top:auto}
+  .footer-row{display:flex;justify-content:space-between;gap:6mm;align-items:center}
+  .foot-left{font-size:8.3pt;line-height:1.45;color:rgba(255,255,255,.82)}
+  .foot-left strong{color:#F0CD76}
+  .foot-right{font-size:7.7pt;line-height:1.45;color:rgba(255,255,255,.58);text-align:right;max-width:68mm}
 
-.meta-bar{display:flex;gap:0;border:1px solid rgba(192,155,58,.22);border-radius:10px;overflow:hidden;width:fit-content}
-.meta-cell{padding:11px 22px;border-right:1px solid rgba(192,155,58,.18);display:flex;flex-direction:column;gap:3px}
-.meta-cell:last-child{border-right:none}
-.meta-lbl{font-size:9px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.28)}
-.meta-val{font-size:13.5px;font-weight:500;color:rgba(255,255,255,.88)}
-.meta-val a{color:var(--gold);text-decoration:none}
-.meta-val .wa{color:#4ADE80;margin-right:3px;font-size:12px}
-
-/* ── MAIN ── */
-.main{max-width:900px;margin:0 auto;padding:50px 44px 80px}
-
-.sec-lbl{display:flex;align-items:center;gap:12px;margin-bottom:18px}
-.sec-lbl span{font-size:9.5px;font-weight:600;letter-spacing:2.2px;text-transform:uppercase;color:var(--muted)}
-.sec-lbl::after{content:'';flex:1;height:1px;background:var(--border)}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));gap:12px;margin-bottom:44px}
-
-.card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px 22px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s}
-.card::after{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--gold),var(--gold-lt));opacity:0;transition:opacity .2s}
-.card:hover{border-color:var(--gold);box-shadow:0 6px 28px rgba(192,155,58,.13)}
-.card:hover::after{opacity:1}
-
-.c-num{font-size:9.5px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold)}
-.c-name{font-size:15px;font-weight:500;color:var(--dark);line-height:1.35;flex:1}
-.c-unit{font-size:11px;color:var(--muted);margin-top:2px}
-.c-rate{display:flex;align-items:baseline;gap:3px;margin-top:6px}
-.r-sym{font-size:13px;color:var(--gold);font-weight:600}
-.r-val{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--dark);line-height:1}
-.r-sfx{font-size:11px;color:var(--muted);margin-left:2px}
-
-/* ── NOTES ── */
-.notes{background:var(--cream);border:1px solid var(--border);border-radius:14px;padding:30px 34px;margin-top:10px}
-.notes-title{display:flex;align-items:center;gap:10px;font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:700;color:var(--charcoal);margin-bottom:20px}
-.notes-title::before{content:'';display:block;width:3px;height:20px;background:var(--gold);border-radius:2px}
-.notes-list{list-style:none;display:flex;flex-direction:column;gap:12px}
-.notes-list li{font-size:13.5px;color:var(--muted);line-height:1.65;padding-left:18px;position:relative}
-.notes-list li::before{content:'—';position:absolute;left:0;color:var(--gold);font-weight:700}
-
-.acc-head{font-size:9.5px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--muted);margin:22px 0 6px}
-.acc-table{width:100%;border-collapse:collapse}
-.acc-table th{font-size:10px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 0;border-bottom:1px solid var(--border)}
-.acc-table td{font-size:13.5px;color:var(--charcoal);padding:9px 0;border-bottom:1px solid var(--border)}
-.acc-table td:last-child{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:15px;color:var(--dark);text-align:right}
-.acc-table tr:last-child td{border-bottom:none}
-
-/* ── FOOTER ── */
-.footer{background:var(--dark);padding:26px 44px}
-.footer-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:6px}
-.footer p{font-size:12px;color:rgba(255,255,255,.3);text-align:center;line-height:1.6}
-.footer strong{color:var(--gold);font-weight:600}
-.footer-divider{width:60px;height:1px;background:rgba(192,155,58,.3);margin-bottom:4px}
-
-@media(max-width:600px){
-  .header-inner,.main{padding-left:20px;padding-right:20px}
-  .headline{font-size:30px}
-  .grid{grid-template-columns:1fr}
-  .meta-bar{flex-wrap:wrap}
-  .meta-cell{border-right:none;border-bottom:1px solid rgba(192,155,58,.18)}
-  .brand-name{font-size:22px}
-}
+  @page{size:A4 portrait;margin:0}
+  @media print{
+    body{padding:0;background:#fff}
+    .sheet{margin:0;border:none;box-shadow:none;width:210mm;height:297mm}
+    a{color:inherit;text-decoration:none}
+  }
+  @media (max-width:900px){
+    body{padding:0;background:#fff}
+    .sheet{width:100%;min-height:auto}
+  }
 </style>
 </head>
 <body>
-
-<div class="header">
-  <div class="halo halo-1"></div>
-  <div class="halo halo-2"></div>
-  <div class="header-inner">
-
-    <div class="brand-row">
-      <div class="logo-wrap">
-        <img src="data:image/png;base64,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" alt="RR Interiors Logo">
+  <div class="sheet">
+    <header class="top">
+      <div class="brand">
+        <div class="brand-left">
+          <div class="logo"><img src="data:image/png;base64,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" alt="RR Interiors & Furniture logo"></div>
+          <div class="identity">
+            <div class="name">RR Interiors &amp; <em>Furniture</em></div>
+            <div class="tag">We design your dreams</div>
+          </div>
+        </div>
+        <div class="title-block">
+          <div class="kicker">Rate Sheet 2026–27</div>
+          <div class="title">Office Furniture &amp; <em>Fittings</em></div>
+          <div class="sub">Compact one-page A4 pricing guide for custom furniture, cabinetry, kitchen works and interior fittings.</div>
+        </div>
       </div>
-      <div class="brand-info">
-        <div class="brand-name">RR Interiors &amp; <em>Furniture</em></div>
-        <div class="brand-tagline">We design your dreams</div>
+
+      <div class="contact">
+        <div class="cell">
+          <span class="lbl">Period</span>
+          <div class="val">2026 – 2027</div>
+        </div>
+        <div class="cell">
+          <span class="lbl">Phone</span>
+          <div class="val"><a class="nowrap" href="tel:+919725432148">+91 97254 32148</a></div>
+        </div>
+        <div class="cell">
+          <span class="lbl">WhatsApp</span>
+          <div class="val"><a class="nowrap" href="https://wa.me/919610053048">+91 96100 53048</a></div>
+        </div>
+        <div class="cell">
+          <span class="lbl">Unit</span>
+          <div class="val">Per Sq. Ft. unless noted</div>
+        </div>
+        <div class="cell">
+          <span class="lbl">Website</span>
+          <div class="val"><a href="https://rrfurniture.co.in/">rrfurniture.co.in</a></div>
+        </div>
+        <div class="cell">
+          <span class="lbl">Instagram</span>
+          <div class="val"><a href="https://www.instagram.com/rr_interiors_and_furniture/">@rr_interiors_and_furniture</a></div>
+        </div>
       </div>
-    </div>
+    </header>
 
-    <div class="divider-gold"></div>
+    <main class="content">
+      <section class="section">
+        <div class="label">Storage &amp; Display</div>
+        <div class="items">
+          <article class="card"><div><div class="num">01</div><div class="item">Rack — Laminate Finish</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 300–350</div></article>
+          <article class="card"><div><div class="num">02</div><div class="item">Rack + Display Unit</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 400–450</div></article>
+          <article class="card"><div><div class="num">05</div><div class="item">Rack — Without Laminate + Paneling</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 200–250</div></article>
+          <article class="card"><div><div class="num">06</div><div class="item">Wardrobe / Box Cupboard</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 400–450</div></article>
+          <article class="card"><div><div class="num">07</div><div class="item">Framing Cupboard</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 400–450</div></article>
+        </div>
+      </section>
 
-    <h1 class="headline">Office Furniture<br>&amp; <em>Fittings</em></h1>
-    <p class="sub">Complete pricing guide for custom furniture, cabinetry, kitchen works, and interior fittings.</p>
+      <section class="section">
+        <div class="label">Tables &amp; Seating</div>
+        <div class="items">
+          <article class="card"><div><div class="num">03</div><div class="item">Counter Table</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 550–600</div></article>
+          <article class="card"><div><div class="num">08</div><div class="item">Sofa</div><div class="unit">Per running ft.</div></div><div class="rate">₹ 550–600</div></article>
+        </div>
+      </section>
 
-    <div class="meta-bar">
-      <div class="meta-cell">
-        <span class="meta-lbl">Period</span>
-        <span class="meta-val">2026 – 2027</span>
+      <section class="section">
+        <div class="label">Paneling &amp; Interiors</div>
+        <div class="items">
+          <article class="card"><div><div class="num">04</div><div class="item">Cover Paneling + Ceiling</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 350–400</div></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="label">Doors</div>
+        <div class="items">
+          <article class="card"><div><div class="num">09</div><div class="item">Door — Double Side Design</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 400–450</div></article>
+          <article class="card"><div><div class="num">10</div><div class="item">Door — Single Side Design</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 300–350</div></article>
+          <article class="card"><div><div class="num">16</div><div class="item">Wooden Door with Bari</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 300–350</div></article>
+          <article class="card"><div><div class="num">17</div><div class="item">Flush Door</div><div class="unit">Per piece</div></div><div class="rate">₹ 3,000–3,500</div></article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="label">Kitchen Works</div>
+        <div class="items">
+          <article class="card"><div><div class="num">11</div><div class="item">Kitchen (Standard)</div><div class="unit">Per sq. ft.</div></div><div class="rate">₹ 550–600</div></article>
+          <article class="card"><div><div class="num">11</div><div class="item">Kitchen Tandem Box</div><div class="unit">Per piece</div></div><div class="rate">₹ 1,000–1,500</div></article>
+          <article class="card"><div><div class="num">12</div><div class="item">Kitchen Single Pantry</div><div class="unit">Per piece</div></div><div class="rate">₹ 1,500–2,000</div></article>
+          <article class="card"><div><div class="num">13</div><div class="item">Kitchen Double Pantry</div><div class="unit">Per piece</div></div><div class="rate">₹ 3,000–3,500</div></article>
+          <article class="card"><div><div class="num">14</div><div class="item">Kitchen Rolling Shutter</div><div class="unit">Per piece</div></div><div class="rate">₹ 1,500–2,000</div></article>
+          <article class="card"><div><div class="num">15</div><div class="item">Kitchen Corner Fitting (All-in-One)</div><div class="unit">Per piece</div></div><div class="rate">₹ 1,500–2,000</div></article>
+        </div>
+      </section>
+    </main>
+
+    <section class="bottom">
+      <div class="notes">
+        <div class="box-title">Important Notes</div>
+        <ul>
+          <li>All rates are on a per square foot basis unless otherwise specified.</li>
+          <li>Rates are tentative and may change depending on the final design and material selection.</li>
+          <li>Kitchen accessories are charged separately as listed in the adjacent table.</li>
+          <li>This layout is optimized to print cleanly on a single A4 page.</li>
+        </ul>
       </div>
-      <div class="meta-cell">
-        <span class="meta-lbl">Phone</span>
-        <span class="meta-val"><a href="tel:+919725432148">+91 97254 32148</a></span>
+      <div class="extras">
+        <div class="box-title">Kitchen Accessories</div>
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Rate</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Basket</td><td>₹ 500 / piece</td></tr>
+            <tr><td>Shutter</td><td>₹ 1,500 / piece</td></tr>
+            <tr><td>Pantry Box</td><td>₹ 1,500 / piece</td></tr>
+            <tr><td>Tandem Box</td><td>₹ 1,000 / piece</td></tr>
+            <tr><td>Swing / Magic Corner</td><td>₹ 1,500 / piece</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="meta-cell">
-        <span class="meta-lbl">WhatsApp</span>
-        <span class="meta-val"><span class="wa">&#9654;</span><a href="https://wa.me/919610053048">+91 96100 53048</a></span>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-row">
+        <div class="foot-left"><strong>RR Interiors &amp; Furniture</strong> · <span class="nowrap">+91 97254 32148</span> · <span class="nowrap">WhatsApp +91 96100 53048</span> · <a href="https://rrfurniture.co.in/" style="color:#F0CD76;text-decoration:none;">rrfurniture.co.in</a> · <a href="https://www.instagram.com/rr_interiors_and_furniture/" style="color:#F0CD76;text-decoration:none;">@rr_interiors_and_furniture</a></div>
+        <div class="foot-right">All prices in Indian Rupee (₹). Rates are indicative and subject to revision without prior notice.</div>
       </div>
-      <div class="meta-cell">
-        <span class="meta-lbl">Unit</span>
-        <span class="meta-val">Per Sq. Ft. (unless noted)</span>
-      </div>
-    </div>
-
+    </footer>
   </div>
-</div>
-
-<div class="main">
-
-  <!-- STORAGE & DISPLAY -->
-  <div class="sec-lbl"><span>Storage &amp; Display</span></div>
-  <div class="grid">
-    <div class="card">
-      <span class="c-num">01</span>
-      <div class="c-name">Rack — Laminate Finish</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">300–350</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">02</span>
-      <div class="c-name">Rack + Display Unit</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">400–450</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">05</span>
-      <div class="c-name">Rack — Without Laminate + Paneling</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">200–250</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">06</span>
-      <div class="c-name">Wardrobe / Box Cupboard</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">400–450</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">07</span>
-      <div class="c-name">Framing Cupboard</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">400–450</span></div>
-    </div>
-  </div>
-
-  <!-- TABLES & SEATING -->
-  <div class="sec-lbl"><span>Tables &amp; Seating</span></div>
-  <div class="grid">
-    <div class="card">
-      <span class="c-num">03</span>
-      <div class="c-name">Counter Table</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">550–600</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">08</span>
-      <div class="c-name">Sofa</div>
-      <div class="c-unit">Per running ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">550–600</span></div>
-    </div>
-  </div>
-
-  <!-- PANELING & INTERIORS -->
-  <div class="sec-lbl"><span>Paneling &amp; Interiors</span></div>
-  <div class="grid">
-    <div class="card">
-      <span class="c-num">04</span>
-      <div class="c-name">Cover Paneling + Ceiling</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">350–400</span></div>
-    </div>
-  </div>
-
-  <!-- DOORS -->
-  <div class="sec-lbl"><span>Doors</span></div>
-  <div class="grid">
-    <div class="card">
-      <span class="c-num">09</span>
-      <div class="c-name">Door — Double Side Design</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">400–450</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">10</span>
-      <div class="c-name">Door — Single Side Design</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">300–350</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">16</span>
-      <div class="c-name">Wooden Door with Bari</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">300–350</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">17</span>
-      <div class="c-name">Flush Door</div>
-      <div class="c-unit">Per piece</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">3,000–3,500</span></div>
-    </div>
-  </div>
-
-  <!-- KITCHEN -->
-  <div class="sec-lbl"><span>Kitchen Works</span></div>
-  <div class="grid">
-    <div class="card">
-      <span class="c-num">11</span>
-      <div class="c-name">Kitchen (Standard)</div>
-      <div class="c-unit">Per sq. ft.</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">550–600</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">11</span>
-      <div class="c-name">Kitchen Tandem Box</div>
-      <div class="c-unit">Per piece</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">1,000–1,500</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">12</span>
-      <div class="c-name">Kitchen Single Pantry</div>
-      <div class="c-unit">Per piece</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">1,500–2,000</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">13</span>
-      <div class="c-name">Kitchen Double Pantry</div>
-      <div class="c-unit">Per piece</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">3,000–3,500</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">14</span>
-      <div class="c-name">Kitchen Rolling Shutter</div>
-      <div class="c-unit">Per piece</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">1,500–2,000</span></div>
-    </div>
-    <div class="card">
-      <span class="c-num">15</span>
-      <div class="c-name">Kitchen Corner Fitting (All-in-One)</div>
-      <div class="c-unit">Per piece</div>
-      <div class="c-rate"><span class="r-sym">₹</span><span class="r-val">1,500–2,000</span></div>
-    </div>
-  </div>
-
-  <!-- NOTES -->
-  <div class="notes">
-    <div class="notes-title">Important Notes</div>
-    <ul class="notes-list">
-      <li>All rates are on a per square foot basis unless otherwise specified.</li>
-      <li>Rates are tentative and subject to change based on the final design selected.</li>
-      <li>Kitchen accessories are charged separately — see the table below.</li>
-    </ul>
-
-    <div class="acc-head">Kitchen Accessories — Extra Charges</div>
-    <table class="acc-table">
-      <thead>
-        <tr><th>Item</th><th style="text-align:right">Rate</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Basket</td><td>₹ 500 / piece</td></tr>
-        <tr><td>Shutter</td><td>₹ 1,500 / piece</td></tr>
-        <tr><td>Pantry Box</td><td>₹ 1,500 / piece</td></tr>
-        <tr><td>Tandem Box</td><td>₹ 1,000 / piece</td></tr>
-        <tr><td>Swing / Magic Corner</td><td>₹ 1,500 / piece</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-</div>
-
-<div class="footer">
-  <div class="footer-inner">
-    <div class="footer-divider"></div>
-    <p><strong>RR Interiors &amp; Furniture</strong> &nbsp;·&nbsp; Rate Sheet 2026–27</p>
-    <p>&#9742; +91 97254 32148 &nbsp;·&nbsp; WhatsApp +91 96100 53048 &nbsp;·&nbsp; All prices in Indian Rupee (₹) &nbsp;·&nbsp; Subject to revision without prior notice</p>
-  </div>
-</div>
-
 </body>
 </html>

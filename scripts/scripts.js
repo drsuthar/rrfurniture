@@ -12,6 +12,20 @@ const applyTheme = (theme) => {
   }
 };
 
+const trackContactClick = (channel, destination) => {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'contact_click', {
+      event_category: 'engagement',
+      event_label: channel,
+      contact_destination: destination,
+    });
+  }
+
+  if (typeof window.clarity === 'function') {
+    window.clarity('event', `contact_${channel}_click`);
+  }
+};
+
 applyTheme(localStorage.getItem('theme') || 'light');
 
 if (themeToggle) {
@@ -37,6 +51,18 @@ if (menuToggle && nav) {
     });
   });
 }
+
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('a[href]');
+  if (!link) return;
+
+  const href = link.getAttribute('href') || '';
+  if (href.startsWith('tel:')) {
+    trackContactClick('phone', href);
+  } else if (href.includes('wa.me/') || href.includes('whatsapp.com/')) {
+    trackContactClick('whatsapp', href);
+  }
+});
 
 document.getElementById('year')?.replaceChildren(document.createTextNode(new Date().getFullYear()));
 

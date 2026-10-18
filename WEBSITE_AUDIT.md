@@ -180,6 +180,17 @@ All priority items except #10 (SSG migration — optional, documented as known d
 | 10 | ⏸️ | Not done — needs a build step, which changes deployment. Documented as "Known debt" in the README. |
 | 11 | ✅ | *Follow-up:* catalogue re-skinned with the site's design tokens (`--bg`, `--surface`, `--text`, `--brand`, `--accent`, `--line`) instead of its own gold/ink palette — same page background, card styling, brand-gradient bands, and it now follows the light/dark theme toggle. Print output is pinned to the light palette. |
 
+### Pass 2 — enterprise polish & established-brand voice (same date)
+
+| Area | What changed |
+|---|---|
+| Trust/utility bar | Dark strip above the header on **all 7 pages**: service areas, hours, "Call +91 97254 32148", "WhatsApp", Instagram — condensed on mobile, hidden in print. |
+| Type & rhythm | Section headings on a tighter scale (`clamp(1.9rem…2.75rem)`, line-height 1.12), uppercase **eyebrow overlines** on every section/page heading, antialiased font rendering, tabular numerals on stats. |
+| Homepage structure | Assurance strip under the hero (free consultation · written quotations · published rates · delivery & installation · after-sales), new **"Where we work"** section (Delhi / Noida / Tirunelveli cards), new **FAQ** section (5 Q&As, `<details>` accordion) with matching **FAQPage JSON-LD**, alternating `.section-alt` bands for rhythm. |
+| Catalogue alignment | Standard page intro above the sheet — eyebrow + `h1` + intro + toolbar (**Print / Save as PDF** button → `window.print()` with a GA event, written-quote and pre-filled WhatsApp CTAs). Now a single `<main id="main-content">`; intro hidden in `@media print` so A4 output is unchanged. |
+| Design system | New `--shadow-sm/lg`, `--radius-sm`, `--ease` tokens; refined buttons (46px height, active states, layered shadows), card hover lift, uppercase micro-chips (`.tag`), softer promo bands, larger section padding, dark-mode variants for all new components. |
+| Brand voice | About page story rewritten around in-house team + 500+ homes + published rates; hero badge → "Trusted by 500+ homes · Delhi NCR & Tirunelveli"; added "one team across Delhi, Noida and Tirunelveli" proof point. |
+
 **New files:** `robots.txt`, `sitemap.xml`, `privacy.html`, `404.html`, `WEBSITE_AUDIT.md`,
 `images/{sofa,table,chair,og-cover}.jpg`.
 
@@ -188,3 +199,4 @@ All priority items except #10 (SSG migration — optional, documented as known d
 2. Swap the sample testimonials on `index.html` for verified customer reviews (with permission) when available.
 3. Confirm which logo is canonical — `logo1.png` / `logo2.png` are still unused.
 4. Consider moving the business email off personal Gmail.
+5. Verify the soft service claims match practice: free first consultation, after-sales support, typical 2–3 week timelines (FAQ + assurance strip).

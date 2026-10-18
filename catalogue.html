@@ -155,7 +155,7 @@
   @page{size:A4 portrait;margin:0}
   @media print{
     body{padding:0;background:#fff}
-    .site-header,.site-footer{display:none}
+    .site-header,.site-footer,.utility-bar,.screen-only{display:none}
     /* Pin the sheet to the light palette even if the site is in dark mode */
     .sheet{
       --bg:#ffffff;
@@ -250,6 +250,20 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="utility-bar">
+    <div class="container utility-inner">
+      <p>Serving Delhi NCR (Delhi &amp; Noida) &amp; Tirunelveli</p>
+      <p class="utility-hours">
+        <span class="utility-hide-sm">Mon – Sat, 10:00 AM – 8:00 PM</span>
+        <span class="utility-dot utility-hide-sm">·</span>
+        <a href="tel:+919725432148">Call +91 97254 32148</a>
+        <span class="utility-dot">·</span>
+        <a href="https://wa.me/919610053048" target="_blank" rel="noopener">WhatsApp</a>
+        <span class="utility-dot utility-hide-sm">·</span>
+        <a class="utility-hide-sm" href="https://www.instagram.com/rr_interiors_and_furniture/" target="_blank" rel="noopener">Instagram</a>
+      </p>
+    </div>
+  </div>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo-wrap" href="index.html">
@@ -270,6 +284,20 @@
     </div>
   </header>
 
+  <main id="main-content">
+    <section class="section page-intro screen-only">
+      <div class="container">
+        <p class="eyebrow">Transparent pricing</p>
+        <h1>Rate Sheet 2026–27</h1>
+        <p class="section-intro">Per sq. ft. rates for furniture, kitchens, wardrobes and interiors — the exact numbers we quote in person. Print it, share it on WhatsApp, or ask us for a written quotation for your space.</p>
+        <div class="cta-row">
+          <button class="btn btn-primary" id="print-sheet" type="button">Print / Save as PDF</button>
+          <a class="btn btn-secondary" href="contact.html">Request a written quote</a>
+          <a class="btn btn-secondary" href="https://wa.me/919610053048?text=Hi%20RR%20Interiors%20%26%20Furniture%2C%20I%20saw%20your%202026%E2%80%9327%20rate%20sheet%20and%20would%20like%20a%20quote." target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
   <div class="sheet">
     <div class="top">
       <div class="brand">
@@ -282,7 +310,7 @@
         </div>
         <div class="title-block">
           <div class="kicker">Rate Sheet 2026–27</div>
-          <h1 class="title">Home Furniture &amp; <em>Fittings</em></h1>
+          <div class="title">Home Furniture &amp; <em>Fittings</em></div>
           <div class="sub">Pricing guide for custom furniture, cabinetry, kitchen works and interior fittings.</div>
         </div>
       </div>
@@ -315,7 +343,7 @@
       </div>
     </div>
 
-    <main id="main-content" class="content">
+    <div class="content">
       <section class="rate-section">
         <h2 class="label">Storage &amp; Display</h2>
         <div class="items">
@@ -363,7 +391,7 @@
           <article class="rate-card"><div><div class="num">18</div><div class="item">Kitchen Corner Fitting (All-in-One)</div><div class="unit">Per piece</div></div><div class="rate">₹ 1,500–2,000</div></article>
         </div>
       </section>
-    </main>
+    </div>
 
     <section class="bottom">
       <div class="notes">
@@ -417,6 +445,7 @@
       </div>
     </div>
   </div>
+  </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">

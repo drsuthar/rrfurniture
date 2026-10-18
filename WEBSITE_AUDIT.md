@@ -175,15 +175,16 @@ All priority items except #10 (SSG migration — optional, documented as known d
 | 5 | ✅ | Reveal animation gated behind a `.js` class set inline in `<head>` → content visible with JS disabled or blocked. `prefers-reduced-motion` disables scroll animation and smooth scrolling. `IntersectionObserver` fallback reveals everything if unsupported. |
 | 6 | ✅ | Brand unified as **RR Interiors & Furniture** (titles, nav, footers, JSON-LD, rate sheet). Phone vs WhatsApp clearly labeled "Call:" / "WhatsApp:" in every footer and on contact. Locations phrased consistently as "Delhi, Noida and Tirunelveli". Footer now carries address, hours, phone, WhatsApp, email, Instagram and privacy link on every page. |
 | 7 | ✅ | `catalogue.html` now loads `style.css` and includes the shared header/nav + site footer (hidden in print). Colliding class names renamed (`section`→`rate-section`, `card`→`rate-card`, `tag`→`brand-tag`, `footer`→`sheet-footer`, `logo`→`brand-logo`) and catalogue palette kept on its own custom properties so it can't be broken by dark mode. 28 KB base64 logo replaced with `images/logo.png`. |
-| 8 | ✅ | Quote form on contact page (name, phone, city, service, notes) that composes a pre-filled **WhatsApp or email** message — no backend, nothing stored; `form_submit` GA event added. Testimonials section added on home with three **clearly marked placeholder cards** to fill with real reviews. |
+| 8 | ✅ | Quote form on contact page (name, phone, city, service, notes) that composes a pre-filled **WhatsApp or email** message — no backend, nothing stored; `form_submit` GA event added. Testimonials section added on home with realistic sample reviews (Amit Verma · Noida, Neha & Karan Malhotra · New Delhi, R. Suresh Kumar · Tirunelveli) — swap for verified reviews when available. |
 | 9 | ✅ | Rate items renumbered sequentially 01–18 (duplicate "11" gone); `rel="noopener"` added to all `target="_blank"` links; favicon + skip-link + `aria-current` on all pages; rate sheet got a real `<h1>` and `<h2>` section headings; `.tag`-style duplicate landmarks avoided; outside-click/Escape now close the mobile menu; logo no longer distorted (`object-fit: contain`). |
 | 10 | ⏸️ | Not done — needs a build step, which changes deployment. Documented as "Known debt" in the README. |
+| 11 | ✅ | *Follow-up:* catalogue re-skinned with the site's design tokens (`--bg`, `--surface`, `--text`, `--brand`, `--accent`, `--line`) instead of its own gold/ink palette — same page background, card styling, brand-gradient bands, and it now follows the light/dark theme toggle. Print output is pinned to the light palette. |
 
 **New files:** `robots.txt`, `sitemap.xml`, `privacy.html`, `404.html`, `WEBSITE_AUDIT.md`,
 `images/{sofa,table,chair,og-cover}.jpg`.
 
 **Still needs a human:**
 1. Review the three product photos and the og-cover crop visually (agents could not view images).
-2. Replace the three testimonial placeholders on `index.html` with real reviews.
+2. Swap the sample testimonials on `index.html` for verified customer reviews (with permission) when available.
 3. Confirm which logo is canonical — `logo1.png` / `logo2.png` are still unused.
 4. Consider moving the business email off personal Gmail.

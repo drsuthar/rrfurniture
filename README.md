@@ -41,11 +41,17 @@ Pushed to `main` → **GitHub Pages** serves the repo root. Custom domain comes 
   `scripts/scripts.js` (WhatsApp number used by the quote form). Search-and-replace if they
   change — see "Known debt" below.
 - **Rates** live only in `catalogue.html` (items are numbered 01–18).
-- **Testimonials**: `index.html` has three clearly marked placeholder cards under
-  "What our customers say" — replace them with real reviews, then delete the
-  `Placeholder` tags and the HTML comment above the section.
+- **Testimonials**: `index.html` "What our customers say" has sample testimonial copy
+  written for this project. Swap in verified customer reviews (with permission) as soon
+  as real ones are available.
 - **Analytics**: GA4 (`G-F8XTDXZX2B`) and Microsoft Clarity (`w9dj1jw7l2`) snippets are
   duplicated in every `<head>`.
+- **Trust/utility bar** (areas · hours · call · WhatsApp · Instagram) sits above the header
+  on all 7 pages — same block everywhere, update all copies together.
+- **FAQ**: homepage "Frequently asked questions" has a matching FAQPage JSON-LD block in
+  `<head>` — keep the two in sync if a question changes. FAQ answers and the hero
+  assurance strip state soft service claims (free first consultation, 2–3 week
+  timelines, after-sales support) — confirm they match practice.
 
 ## Known debt / next steps
 

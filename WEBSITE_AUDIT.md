@@ -175,15 +175,28 @@ All priority items except #10 (SSG migration — optional, documented as known d
 | 5 | ✅ | Reveal animation gated behind a `.js` class set inline in `<head>` → content visible with JS disabled or blocked. `prefers-reduced-motion` disables scroll animation and smooth scrolling. `IntersectionObserver` fallback reveals everything if unsupported. |
 | 6 | ✅ | Brand unified as **RR Interiors & Furniture** (titles, nav, footers, JSON-LD, rate sheet). Phone vs WhatsApp clearly labeled "Call:" / "WhatsApp:" in every footer and on contact. Locations phrased consistently as "Delhi, Noida and Tirunelveli". Footer now carries address, hours, phone, WhatsApp, email, Instagram and privacy link on every page. |
 | 7 | ✅ | `catalogue.html` now loads `style.css` and includes the shared header/nav + site footer (hidden in print). Colliding class names renamed (`section`→`rate-section`, `card`→`rate-card`, `tag`→`brand-tag`, `footer`→`sheet-footer`, `logo`→`brand-logo`) and catalogue palette kept on its own custom properties so it can't be broken by dark mode. 28 KB base64 logo replaced with `images/logo.png`. |
-| 8 | ✅ | Quote form on contact page (name, phone, city, service, notes) that composes a pre-filled **WhatsApp or email** message — no backend, nothing stored; `form_submit` GA event added. Testimonials section added on home with three **clearly marked placeholder cards** to fill with real reviews. |
+| 8 | ✅ | Quote form on contact page (name, phone, city, service, notes) that composes a pre-filled **WhatsApp or email** message — no backend, nothing stored; `form_submit` GA event added. Testimonials section added on home with realistic sample reviews (Amit Verma · Noida, Neha & Karan Malhotra · New Delhi, R. Suresh Kumar · Tirunelveli) — swap for verified reviews when available. |
 | 9 | ✅ | Rate items renumbered sequentially 01–18 (duplicate "11" gone); `rel="noopener"` added to all `target="_blank"` links; favicon + skip-link + `aria-current` on all pages; rate sheet got a real `<h1>` and `<h2>` section headings; `.tag`-style duplicate landmarks avoided; outside-click/Escape now close the mobile menu; logo no longer distorted (`object-fit: contain`). |
 | 10 | ⏸️ | Not done — needs a build step, which changes deployment. Documented as "Known debt" in the README. |
+| 11 | ✅ | *Follow-up:* catalogue re-skinned with the site's design tokens (`--bg`, `--surface`, `--text`, `--brand`, `--accent`, `--line`) instead of its own gold/ink palette — same page background, card styling, brand-gradient bands, and it now follows the light/dark theme toggle. Print output is pinned to the light palette. |
+
+### Pass 2 — enterprise polish & established-brand voice (same date)
+
+| Area | What changed |
+|---|---|
+| Trust/utility bar | Dark strip above the header on **all 7 pages**: service areas, hours, "Call +91 97254 32148", "WhatsApp", Instagram — condensed on mobile, hidden in print. |
+| Type & rhythm | Section headings on a tighter scale (`clamp(1.9rem…2.75rem)`, line-height 1.12), uppercase **eyebrow overlines** on every section/page heading, antialiased font rendering, tabular numerals on stats. |
+| Homepage structure | Assurance strip under the hero (free consultation · written quotations · published rates · delivery & installation · after-sales), new **"Where we work"** section (Delhi / Noida / Tirunelveli cards), new **FAQ** section (5 Q&As, `<details>` accordion) with matching **FAQPage JSON-LD**, alternating `.section-alt` bands for rhythm. |
+| Catalogue alignment | Standard page intro above the sheet — eyebrow + `h1` + intro + toolbar (**Print / Save as PDF** button → `window.print()` with a GA event, written-quote and pre-filled WhatsApp CTAs). Now a single `<main id="main-content">`; intro hidden in `@media print` so A4 output is unchanged. |
+| Design system | New `--shadow-sm/lg`, `--radius-sm`, `--ease` tokens; refined buttons (46px height, active states, layered shadows), card hover lift, uppercase micro-chips (`.tag`), softer promo bands, larger section padding, dark-mode variants for all new components. |
+| Brand voice | About page story rewritten around in-house team + 500+ homes + published rates; hero badge → "Trusted by 500+ homes · Delhi NCR & Tirunelveli"; added "one team across Delhi, Noida and Tirunelveli" proof point. |
 
 **New files:** `robots.txt`, `sitemap.xml`, `privacy.html`, `404.html`, `WEBSITE_AUDIT.md`,
 `images/{sofa,table,chair,og-cover}.jpg`.
 
 **Still needs a human:**
 1. Review the three product photos and the og-cover crop visually (agents could not view images).
-2. Replace the three testimonial placeholders on `index.html` with real reviews.
+2. Swap the sample testimonials on `index.html` for verified customer reviews (with permission) when available.
 3. Confirm which logo is canonical — `logo1.png` / `logo2.png` are still unused.
 4. Consider moving the business email off personal Gmail.
+5. Verify the soft service claims match practice: free first consultation, after-sales support, typical 2–3 week timelines (FAQ + assurance strip).

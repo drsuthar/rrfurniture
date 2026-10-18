@@ -170,3 +170,15 @@ if (quoteForm) {
     }
   });
 }
+
+// Rate sheet: print / save-as-PDF action (catalogue page)
+const printSheet = document.getElementById('print-sheet');
+
+if (printSheet) {
+  printSheet.addEventListener('click', () => {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'print_rate_sheet', { event_category: 'engagement' });
+    }
+    window.print();
+  });
+}

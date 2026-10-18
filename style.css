@@ -16,6 +16,17 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 body {
   margin: 0;
   font-family: "Jost", "Segoe UI", Roboto, Arial, sans-serif;
@@ -27,7 +38,7 @@ body {
     var(--bg);
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; }
 .skip-link {
   position: absolute;
@@ -76,11 +87,19 @@ button:focus-visible {
   gap: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.02em;
+  min-width: 0;
+}
+.logo-wrap span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .logo {
-  width: 42px;
+  width: auto;
+  max-width: 140px;
   height: 42px;
-  border-radius: 12px;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 .site-nav {
@@ -171,6 +190,7 @@ button:focus-visible {
   padding: 0.76rem 1.16rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   border: 1px solid transparent;
+  cursor: pointer;
 }
 .btn:hover { transform: translateY(-1px); }
 
@@ -302,22 +322,113 @@ button:focus-visible {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  padding: 1.2rem 0;
+  padding: 1.6rem 0 1.2rem;
   color: var(--text-soft);
+  font-size: 0.93rem;
 }
 .footer-inner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
+  gap: 1.5rem;
+}
+.footer-brand { max-width: 36ch; }
+.footer-name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.3rem;
+}
+.footer-brand p { margin: 0; }
+.footer-col p { margin: 0.28rem 0; }
+.footer-col a { text-decoration: none; }
+.footer-col a:hover { text-decoration: underline; }
+.footer-bottom {
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+.footer-bottom p { margin: 0; }
+
+.quote {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.12rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+}
+.quote-author {
+  margin: 0.7rem 0 0;
+  color: var(--text-soft);
+  font-size: 0.92rem;
 }
 
+.quote-form {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.4rem;
+  display: grid;
+  gap: 0.9rem;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.field { display: grid; gap: 0.35rem; }
+.field label { font-weight: 600; font-size: 0.93rem; }
+.field input,
+.field select,
+.field textarea {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 0.66rem 0.8rem;
+  width: 100%;
+}
+.field textarea { resize: vertical; min-height: 96px; }
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand) 60%, white);
+  outline-offset: 1px;
+}
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+.form-note { margin: 0; color: var(--text-soft); font-size: 0.88rem; }
+.form-status { margin: 0; font-weight: 600; color: var(--brand-dark); }
+body.dark-mode .form-status { color: var(--accent); }
+
 .fade-up {
-  opacity: 0;
-  transform: translateY(18px);
   transition: 0.6s ease;
 }
-.fade-up.in-view { opacity: 1; transform: translateY(0); }
+/* Hidden state only when JS is confirmed running (`.js` set in <head>),
+   so content is never invisible without JavaScript. */
+.js .fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.js .fade-up.in-view { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 
 body.dark-mode {
   --bg: #100f12;
@@ -359,6 +470,10 @@ body.dark-mode .tag {
     align-items: flex-start;
   }
 
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
   .site-nav {
     position: absolute;
     inset: 80px 1rem auto 1rem;
@@ -373,4 +488,9 @@ body.dark-mode .tag {
   }
   .site-nav.open { display: flex; }
   .mobile-menu-btn { display: inline-flex; align-items: center; justify-content: center; }
+}
+
+@media (max-width: 560px) {
+  .logo-wrap span { display: none; }
+  .logo { height: 38px; }
 }
